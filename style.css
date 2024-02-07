@@ -4,6 +4,12 @@ html, body {
   height: 100%;
   overflow: auto;
 
+  font-family: Arial, Helvetica, sans-serif;
+
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b2e1ff+0,66b6fc+100;Blue+3D+%236 */
   background: radial-gradient(ellipse at center,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+a {
+  color: #07F;
 }

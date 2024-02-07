@@ -9,25 +9,45 @@
     <center>
       <h1>Site Pet</h1>
       Repository: <a target="_blank" href="https://github.com/derDere/site-pet/">Site Pet</a><br><br>
+      Sprite:
       <select id="dev-select">
-        <option>sprite.png</option>
-        <option selected>example.png</option>
+        <option>sprite</option>
+        <option selected>example</option>
       </select>
+      <span id="cred"></span>
       <br><br>
-      <a target="_blank" href="SpritePrefap_Layout.png">SpritePrefap_Layout.png</a>
+      <a target="_blank" href="SpritePrefap_Layout.png">Sprite Layout</a>
+      <br><br>
+      <span id="fc-42122"></span>
     </center>
 
     <script src="site-pet.js"></script>
     <script>
-      var ele = createSitePet();
+      const ele = createSitePet();
+
+      const cred = document.getElementById('cred');
+      const credits = {
+        "sprite": ["derDere", "https://github.com/derDere/"],
+        "example": ["derDere", "https://github.com/derDere/"],
+      };
+
       setInterval(function() {
-        var sel = document.getElementById('dev-select');
-        var bg = sel.value;
-        ele.style.backgroundImage = `url(gfx/${bg})`;
+        let sel = document.getElementById('dev-select');
+        let bg = sel.value;
+        ele.style.backgroundImage = `url(gfx/${bg}.png)`;
+
+        let [name, url] = credits[bg];
+
+        let html;
+        if (url) {
+          html = `Credits for this sprite go to: <a target="_blank" href="${url}">${name}</a>`;
+        } else {
+          html = `Credits for this sprite go to: ${name}`;
+        }
+        cred.innerHTML = html;
       }, 500);
     </script>
 
-    <span id="fc-42122"></span>
     <script>
     var fcr = Math.floor(Math.random()*99999999999);
     var _fcc = _fcc || []; _fcc.push(["42122"]); _fcc.push(["blue"]);(function(){
