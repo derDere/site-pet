@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <title>Site Pet</title>
+  </head>
+  <body>
+    <select id="dev-select">
+      <option>sprite.png</option>
+      <option selected>example.png</option>
+    </select>
+    <br>
+    <a target="_blank" href="SpritePrefap_Layout.png">SpritePrefap_Layout.png</a>
+    <script src="site-pet.js"></script>
+    <script>
+      var ele = createSitePet();
+      setInterval(function() {
+        var sel = document.getElementById('dev-select');
+        var bg = sel.value;
+        ele.style.backgroundImage = `url(gfx/${bg})`;
+      }, 500);
+    </script>
+  </body>
+</html>
