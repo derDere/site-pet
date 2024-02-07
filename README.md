@@ -1,4 +1,4 @@
-# site-pet
+# Site Pet
 
 site-pet is a lightweight JavaScript script that allows you to add a small animated pet to any website. This pet will roam around the webpage, adding a touch of fun and interactivity for your visitors.
 
