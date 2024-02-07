@@ -21,7 +21,7 @@ function createSitePet(gfx) {
   ele.style.width = '64px';
   ele.style.height = '64px';
   //ele.style.backgroundColor = '#f0f';
-  ele.style.backgroundImage = `url(gfx/${gfx}.png)`;
+  ele.style.backgroundImage = `url(https://derdere.github.io/site-pet/gfx/${gfx}.png)`;
   ele.style.backgroundRepeat = 'no-repeat';
   ele.style.backgroundPosition = '0px 0px';
 
