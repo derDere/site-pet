@@ -35,3 +35,4 @@ Contributions:
 | derDere       | [example](https://derdere.github.io/site-pet/gfx/example.png)  |
 
 If you're interested in contributing your own sprite, feel free to submit a pull request! We welcome all creative additions to the site-pet family.
+You can find the layout for a single sprite right [here](https://derdere.github.io/site-pet/SpritePrefap_Layout.png).
