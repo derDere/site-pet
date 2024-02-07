@@ -37,7 +37,7 @@ function createSitePet(gfx) {
 
   ele.style.top = `${y}px`;
   ele.style.left = `${x}px`;
-  ele.style.transition = 'top 1350ms linear, left 1350ms linear';
+  ele.style.transition = 'top 1500ms linear, left 1500ms linear';
 
   var setAnim = (a) => {
     frame = 0;
