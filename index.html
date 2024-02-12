@@ -55,6 +55,7 @@
       setInterval(function() {
         let sel = document.getElementById('dev-select');
         if (sel.value == '') {
+          cred.innerHTML = "...";
           return;
         }
         input_testyourown.value = "";
