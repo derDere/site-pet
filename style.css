@@ -13,3 +13,18 @@ html, body {
 a {
   color: #07F;
 }
+
+.hidden {
+  display: none;
+  opacity: 0;
+  z-index: -999;
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  border: 0 none;
+  background: none;
+  font-size: 1px;
+  color: transparent;
+}

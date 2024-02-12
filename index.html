@@ -7,6 +7,7 @@
     <title>Site Pet</title>
   </head>
   <body>
+    <input id="testyourown" class="hidden" type="file" accept="image/png, image/gif" />
     <center>
       <h1>Site Pet</h1>
       Repository: <a target="_blank" href="https://github.com/derDere/site-pet/">Site Pet</a><br><br>
@@ -17,6 +18,10 @@
       </select>
       <span id="cred"></span>
       <br><br>
+      <span style="font-size:12px;">This a demo of the Site-Pet project. Feel free to browse the current sprites or test your own sprite. You can click on the pet to pat it.</span>
+      <br><br>
+      <button onclick="uploadYourOwn();">Test your own sprite</button>
+      <br><br>
       <a target="_blank" href="SpritePrefap_Layout.png">Sprite Layout</a>
       <br><br>
       <span id="fc-42122"></span>
@@ -25,6 +30,7 @@
     <script src="site-pet.js"></script>
     <script>
       const ele = createSitePet();
+      const input_testyourown = document.getElementById('testyourown');
 
       const cred = document.getElementById('cred');
       const credits = {
@@ -32,8 +38,26 @@
         "example": ["derDere", "https://github.com/derDere/"],
       };
 
+      function uploadYourOwn() {
+        input_testyourown.click();
+      }
+      input_testyourown.addEventListener('change', function(event) {
+        var file = event.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function(event) {
+          let sel = document.getElementById('dev-select');
+          sel.value = "";
+          ele.style.backgroundImage = 'url(' + event.target.result + ')';
+        };
+        reader.readAsDataURL(file);
+      });
+
       setInterval(function() {
         let sel = document.getElementById('dev-select');
+        if (sel.value == '') {
+          return;
+        }
+        input_testyourown.value = "";
         let bg = sel.value;
         ele.style.backgroundImage = `url(gfx/${bg}.png)`;
 
